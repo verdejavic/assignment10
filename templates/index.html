@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Check out the top 20 famous female volleyball players according to <a href="http://www.ranker.com/list/famous-female-volleyball-players/reference">Ranker</a>!</h1>
+
+<ul class="players">
+  {% for player in players %}
+  <li><a href="{{ url_for('player', id=player.id) }}"> {{ player.name }} </a></li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}
