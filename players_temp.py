@@ -36,6 +36,9 @@ def player(id):
     return render_template('player.html', id=id, name=name, age=age, birthplace=birthplace)
 
 
+#to work offline
+app.config['BOOTSTRAP_SERVE_LOCAL'] = True
+
 
 if __name__ == '__main__':
     app.run(debug=True)
